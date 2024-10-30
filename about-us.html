@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us - BENZO</title>
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="text/javascript" src="JavaScript/script.js" defer></script>
+</head>
+<body>
+
+<!-- Sticky Navbar with Logo and Menu -->
+<div id="navbar" class="navbar">
+    <img id="logo" src="Images/BenzoLogo.jpg" alt="BENZO Logo">
+    <div class="nav-links">
+        <a href="/index.html" class="nav-item">Home</a>
+        <a href="/profiles.html" class="nav-item" target="_blank">Artists</a>
+        <button onclick="toggleMenu()" class="nav-item">Menu</button>
+        <div id="menuItems" class="menu-items">
+            <label><a href="/about-us.html" class="active">About Us</a></label><br>
+            <label><a href="/profiles.html">Profiles</a></label><br>
+            <label><a href="/blog-home.html">Blogs</a></label><br>
+            <label><a href="/form.html">Commission</a></label><br>
+        </div>
+    </div>
+</div>
+
+<!-- Sticky Search Bar with Filter Menu -->
+<div class="search-bar-container">
+    <input type="text" id="search" placeholder="Search images..." onkeyup="searchImages()"/>
+    <div id="search-results" style="display:none; position: absolute; background-color: #fff; border: 1px solid #ddd; max-width: 300px;"></div>
+    <button onclick="toggleFilter()">Filter</button>
+    <div id="filterItems" class="filter-menu">
+        <label><input type="checkbox"> Tag 1</label><br>
+        <label><input type="checkbox"> Tag 2</label><br>
+        <label><input type="checkbox"> Tag 3</label><br>
+    </div>
+</div>
+
+<body>
+
+    <div class="aboutus">
+        <h1>About Us</h1>
+        <p>
+            Welcome to <span class="highlight">BENZO</span>, where creativity meets opportunity! We are a passionate team dedicated to connecting talented artists with clients seeking custom artwork. Our mission is to provide a platform that fosters collaboration, promotes artistic expression, and helps artists thrive in their craft. We believe that every artist has a unique story to tell and we are here to support them every step of the way.
+        </p>
+        <p>
+            At BENZO, we understand the challenges artists face in the competitive landscape of commissioned work. Our goal is to make the commissioning process seamless and accessible for both artists and clients. Whether you're looking for a stunning piece of art to elevate your space or an artist eager to showcase their talent, you've come to the right place. Join us on this exciting journey as we celebrate creativity and bring ideas to life!
+        </p>
+    </div>
+
+</body>

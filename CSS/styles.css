@@ -1,0 +1,859 @@
+/* General Styling */
+body {
+    margin: 0;
+    color: #333;
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #e9dfd3; /* Light background for overall content */
+}
+
+.aboutus {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f2f2f2; /* Card-like background */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 3rem;
+    color: #14293c; /* Title color */
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Open Dyslexic', Arial, sans-serif; /* Use a dyslexia-friendly font */
+}
+
+p {
+    font-size: 1.2rem;
+    color: #000;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    text-align: justify;
+}
+
+.highlight {
+    background-color: #d8dcdb; /* Highlight color */
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.form-container {
+    border-radius: 5px;
+    background-color: #f2f2f2; /* Light gray background for the form */
+    padding: 20px;
+    margin: 20px auto; /* Centering the form */
+    max-width: 600px; /* Maximum width for the form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+label {
+    margin-bottom: 8px;
+    display: block; /* Block display for labels */
+    color: #14293c; /* Label text color */
+}
+
+input[type=text],
+input[type=email],
+textarea,
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Sticky Navbar */
+#navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(120deg, #d8dcdb, #abbbb0); /* Subtle gradient */
+    padding: 15px 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+    color: #ffffff;
+}
+
+.navbar a.active {
+    background-color: #abbbb0;
+    color: #ffffff;
+}
+
+.nav-links a.active {
+    background-color: #abbbb0;
+    color: #fff;
+    font-weight: bold;
+}
+
+.sound-btn {
+    background-color: #abbbb0; /* Button color from your palette */
+    color: #000000; /* Text color */
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.sound-btn:hover {
+    background-color: #668091; /* Button color when hovered */
+}
+
+/* Logo */
+#logo {
+    height: 50px;
+    width: auto;
+    margin-right: 20px;
+}
+
+/* Navbar links - desktop view */
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: #333;
+    padding: 10px 12px;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 4px;
+}
+
+.nav-links a:hover {
+    background-color: #d8dcdb;
+    color: black;
+}
+
+.nav-links a.active {
+    background-color: #abbbb0;
+    color: white;
+}
+
+/* Search Bar */
+.search-bar-container {
+    position: sticky;
+    background: linear-gradient(90deg, #e0eafc, #cfdef3); /* Light blue gradient */
+    padding: 15px;
+    top: 70px; /* Adjust as necessary */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    z-index: 999;
+}
+
+#search {
+    max-width: 500px; /* Adjust this based on your design */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Ensure that #search-results appears below .search-bar-container */
+.search-bar-container + #search-results {
+    margin-top: 10px; /* Add spacing if needed */
+    position: relative;
+    width: 100%; /* Adjust as necessary */
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#search-results {
+    display: none; /* Hidden by default */
+    position: relative; /* Change to relative */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-width: 300px;
+    z-index: 1000; /* Ensure it appears above other elements */
+    margin-top: 10px; /* Adds space below the navbar */
+    transition: all 0.3s ease-in-out;
+    top: 100%; /* Pushes the box below the search bar */
+    left: 100;
+}
+
+#search-results div {
+    padding: 10px;
+    cursor: pointer; /* Change cursor on hover */
+    border-bottom: 1px solid #ddd; /* Separator between results */
+}
+
+#search-results div:last-child {
+    border-bottom: none; /* Remove border from the last item */
+}
+
+#search-results div:hover {
+    background-color: #f0f0f0; /* Highlight on hover */
+    color: #007BFF
+}
+
+#search-results a {
+    text-decoration: none;
+    color: #333;
+}
+
+button {
+    background: linear-gradient(90deg, #abbbb0, #668091); /* Green gradient */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #d8dcdb, #14293c); /* Lighter hover state */
+    color: black;
+}
+
+/* Menu and Filter Styling */
+.menu-items,
+.filter-menu {
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px); /* Slide effect */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 999;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Positioning adjustments */
+#menuItems {
+    top: 60px;
+    left: 10px;
+}
+
+#filterItems {
+    top: 60px;
+    left: 220px;
+}
+
+/* Active class for smooth display */
+.menu-items.active,
+.filter-menu.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0); /* Slides into view */
+}
+
+/* Gallery Container */
+.gallery {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    display: flex;
+    align-items: center; /* Center images vertically */
+    background: linear-gradient(90deg,#1a1a1a, black); /* Light background color #e9dfd3 */
+    padding: 20px 0; /* Padding to create space around the gallery */
+    scroll-snap-type: x mandatory; /* Enable horizontal scroll snapping */
+}
+
+
+/* Gallery Wrapper */
+.gallery-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    width: calc(100% * 2); /* Double the width to handle duplicate images */
+    transition: transform 0.5s ease; /* Smooth transition */
+}
+
+/* Gallery Items */
+.gallery img {
+    width: 300px; /* Fixed width for consistency */
+    height: 300px; /* Fixed height */
+    object-fit: cover; /* Ensures no stretching */
+    flex-shrink: 0;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for a clean look */
+    margin: 0 10px; /* Space between images */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+    scroll-snap-align: center; /* Center snapping */
+    display: block;
+}
+
+#gallery img {
+    width: 100%;  /* Ensures full container width */
+    height: 300px;  /* Maintain consistent height */
+    object-fit: cover;  /* Prevent stretching */
+    border-radius: 8px;
+}
+
+#gallery img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+.gallery img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.gallery-item {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gallery-item h3 {
+    font-size: 18px;
+    color: #5f5f5f;
+    margin-bottom: 10px;
+}
+
+/* Content Padding */
+.content {
+    padding: 40px 20px;
+}
+
+.hero {
+    height: 60vh;
+    background: linear-gradient(120deg, black); /* Subtle gradient  #e9dfd3, #d8dcdb */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #666;
+    text-align: center;
+}
+
+.hero-content button {
+    background: linear-gradient(90deg, #333, #666); /* Dark button with gradient */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero-content button:hover {
+    background: linear-gradient(90deg, #555, #777); /* Darker hover state */
+}
+
+.featured-artists {
+    padding: 40px 0;
+    background-color: #fafafa;
+    text-align: center;
+}
+
+.featured-artists h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.artist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.artist-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.artist-card h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.artist-card img:hover {
+    transform: scale(1.05); /* Subtle zoom effect */
+}
+
+.testimonials {
+    padding: 50px;
+    background: linear-gradient(120deg, #f5f5f5, #eaeaea); /* Soft gray gradient */
+    text-align: center;
+}
+
+.testimonial-card {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.testimonial-card h4 {
+    font-size: 1rem;
+    color: #333;
+}
+
+.cta {
+    padding: 50px;
+    text-align: center;
+    background: linear-gradient(90deg, #e3ffe7, #d9e7ff); /* Fresh gradient */
+}
+
+.cta h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.cta form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.cta input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+}
+
+.cta button {
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #333, #666); /* Dark gradient */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta button:hover {
+    background: linear-gradient(90deg, #555, #777); /* Darker hover effect */
+}
+
+.blog-posts {
+    padding: 20px;
+}
+
+.post {
+    margin-bottom: 20px;
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+}
+
+/* Footer Style */
+footer {
+    background: linear-gradient(90deg, #333, #555); /* Dark gradient */
+    color: #444f;
+    padding: 40px 20px;
+    font-size: 16px;
+}
+
+footer a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+footer a:hover {
+    color: #abbbb0;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 20px 0;
+    background-color: #f9f9f9; /* Background color for the footer */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.footer-column h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333; /* Text color for the heading */
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #444;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #444;
+}
+
+.footer-column p a {
+    color: #444;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column p a:hover {
+    color: #444;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #444;
+    font-size: 14px;
+}
+
+/* Social Links */
+.social-links a {
+    display: inline-block;
+    margin-right: 15px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    color: #444; /* Default icon color */
+    font-size: 24px; /* Size of the icons */
+}
+
+.social-links a:hover {
+    opacity: 1;
+    color: #444; /* Change color on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+    border-radius: 50%; /* Circle effect */
+    padding: 8px; /* Add padding for spacing */
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Social Links */
+.social-links a img {
+    width: 30px;  /* Adjust width */
+    height: 30px; /* Adjust height */
+    transition: transform 0.3s; /* Add transition for scaling effect */
+}
+
+/*Toggle buttons*/
+.toggle-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 20px; /* Space between items */
+    justify-items: center; /* Center items in each grid cell */
+    margin: 20px 0;
+}
+
+.toggle-item {
+    display: flex;
+    flex-direction: column; /* Stack the text above the toggle */
+    align-items: center; /* Center horizontally */
+    cursor: pointer;
+}
+
+.text {
+    font-size: 23px;
+    color: #494949;
+    margin-bottom: 8px; /* Space between text and toggle button */
+}
+
+.toggle {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    border: 2px solid #494949;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.circle {
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #494949;
+    transition: .3s;
+}
+
+/* Active states */
+.active {
+    border-color: #abbbb0;
+}
+
+.active + .text {
+    color: #abbbb0;
+}
+
+.active .circle {
+    left: 100%;
+    transform: translateX(-100%);
+    background-color: #abbbb0;
+}
+
+/* Styles for Artist Profiles */
+.artist-card {
+    display: none; /* Initially hide all */
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.active-artist {
+    display: block; /* Show active */
+}
+
+/* Profile Gallery */
+#image-gallery {
+    padding: 40px;
+    margin: 0 auto;
+}
+
+/* Center the gallery container horizontally */
+#image-gallery .container {
+    max-width: 1200px; /* Adjust as necessary */
+    margin: 0 auto; /* Centers the container */
+}
+
+#image-gallery h1.gallery-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 3rem; /* Adjust font size if necessary */
+}
+
+.gallery-title {
+    font-size: 36px;
+    color: #db584e;
+    text-align: center;
+    font-weight: 700;
+    padding: 20px 0 40px;
+}
+
+.gallery-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery_product {
+    flex: 0 1 calc(33.333% - 20px);
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    text-align: center; /* Center the image and its content */
+}
+
+.gallery_product img {
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    width: 300px; /* Fixed width */
+    height: 300px; /* Fixed height */
+    object-fit: cover; /* Ensures no stretching */
+}
+
+.gallery_product img:hover {
+    transform: scale(1.05);
+}
+
+/* Styles for the rating system */
+.star {
+    font-size: 2em;
+    cursor: pointer;
+    color: gray;
+}
+.star.selected {
+    color: gold;
+}
+
+/* Comment section styles */
+.comments-section {
+    margin-top: 20px;
+}
+.comment {
+    margin-top: 10px;
+}
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+}
+
+/* Media Queries for Responsiveness */
+@media only screen and (max-width: 768px) {
+    #logo {
+        height: 40px;
+    }
+
+    #search {
+        width: 60%;
+    }
+
+    #navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 15px;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    /* Adjust gallery padding for smaller screens */
+    .gallery {
+        padding: 15px 0; /* Reduced padding for smaller screens */
+    }
+
+    .gallery img {
+        width: 250px; /* Adjust image width for medium screens */
+        margin: 0 8px; /* Reduced margin for smaller screens */
+    }
+    /* Adjust grid layout for smaller screens */
+    .row {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* Special Handling for Extra Small Screens */
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: 18px;
+    }
+
+    /* Align logo and buttons in one row */
+    #navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+        flex-wrap: nowrap;
+    }
+
+    .nav-links a, .nav-links button {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    #logo {
+        height: 30px;
+
+    }
+
+    /* Adjust navbar buttons for mobile */
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 5px;
+        flex-wrap: nowrap;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+        padding: 8px 10px;
+        display: inline-block;
+        text-align: center;
+    }
+
+    /* Search bar adjustment */
+    #search {
+        width: 100%; /* Make the search bar full width on small screens */
+    }
+
+    .search-bar-container {
+        flex-direction: column; /* Stack elements vertically on small screens */
+        align-items: center; /* Center elements */
+        margin: 10; /* Remove any margin */
+        padding: 10; /* Optional: Adjust padding as necessary */
+        top: 50px; /* Adjust based on navbar height */
+        margin: 10 auto; /* Center it horizontally */
+        z-index: 150; /* Slightly lower than navbar */
+    }
+
+    /* Gallery adjustments for extra small screens */
+    .gallery {
+        padding: 10px 0; /* Further reduced padding for small screens */
+    }
+
+    .gallery img {
+        width: 200px; /* Adjust image width for small screens */
+        margin: 0 5px; /* Further reduced margin */
+    }
+    /* Further adjustments for mobile */
+    .row {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profiles - BENZO</title>
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="text/javascript" src="JavaScript/script.js" defer></script>
+</head>
+<body>
+
+<!-- Sticky Navbar with Logo and Menu -->
+<div id="navbar" class="navbar">
+    <img id="logo" src="Images/BenzoLogo.jpg" alt="BENZO Logo">
+    <div class="nav-links">
+        <a href="/index.html" class="nav-item">Home</a>
+        <a href="/profiles.html" class="nav-item" target="_blank" style="color: #f9f9f9; background-color: #333;" class="active">Artists</a>
+        <button onclick="toggleMenu()" class="nav-item">Menu</button>
+        <div id="menuItems" class="menu-items">
+            <label><a href="about-us.html">About Us</a></label><br>
+            <label><a href="/profiles.html" class="active">Profiles</a></label><br>
+            <label><a href="/blog-home.html">Blogs</a></label><br>
+            <label><a href="/form.html">Commission</a></label><br>
+        </div>
+    </div>
+</div>
+
+<!-- Sticky Search Bar with Filter Menu -->
+<div class="search-bar-container">
+    <input type="text" id="search" placeholder="Search images..." onkeyup="searchImages()"/>
+    <div id="search-results" style="display:none; position: absolute; background-color: #fff; border: 1px solid #ddd; max-width: 300px;"></div>
+</div>
+
+<!--Gallery Section-->
+<section id="image-gallery">
+    <div class="container">
+        <div class="gallery-header col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
+            <h1 class="gallery-title">Gallery</h1>
+        </div>
+        <div class="row gallery-row">
+            <div class="gallery_product col-md-4 filter nature">
+                <a href="artitem.html?id=1">
+                    <img src="Images/Nature/ai-generated-8659507_1280.jpg" alt="Nature Image">
+                </a>
+            </div>
+            <div class="gallery_product col-md-4 filter Future">
+                <a href="artitem.html?id=2">
+                    <img src="Images/Future/city-5312500_1280.jpg" alt="Future Image">
+                </a>
+            </div>
+            <div class="gallery_product col-md-4 filter steampunk">
+                <a href="artitem.html?id=3">
+                    <img src="Images/Steampunk/ai-generated-7946718_1280.jpg" alt="SteamPunk Image">
+                </a>
+            </div>
+            <div class="gallery_product col-md-4 filter space">
+                <a href="artitem.html?id=4">
+                    <img src="Images/Space/ai-generated-9035417_1280.jpg" alt="Space Image">
+                </a>
+            </div>
+            <div class="gallery_product col-md-4 filter nature">
+                <a href="artitem.html?id=5">
+                    <img src="Images/Nature/flower-7242158_1280.jpg" alt="Nature Image">
+                </a>
+            </div>
+            <div class="gallery_product col-md-4 filter cars">
+                <a href="artitem.html?id=6">
+                    <img src="Images/Cars/ai-generated-8674235_1280.png" alt="Cars Image">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Toggle Buttons for Tags -->
+<div class="toggle-container">
+    <div class="toggle-item" onclick="toggle('nature')">
+        <span class="text" id="nature-text">Nature</span>
+        <div class="toggle">
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <div class="toggle-item" onclick="toggle('space')">
+        <span class="text" id="space-text">Space</span>
+        <div class="toggle">
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <div class="toggle-item" onclick="toggle('steampunk')">
+        <span class="text" id="steampunk-text">SteamPunk</span>
+        <div class="toggle">
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <div class="toggle-item" onclick="toggle('cars')">
+        <span class="text" id="cars-text">Cars</span>
+        <div class="toggle">
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <div class="toggle-item" onclick="toggle('future')">
+        <span class="text" id="future-text">Future</span>
+        <div class="toggle">
+            <div class="circle"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Artist Profiles Section -->
+<section class="featured-artists">
+    <h2>Featured Artists</h2>
+    <div class="artist-grid">
+        <div class="artist-card" data-tags="nature">
+            <img src="artist1.jpg" alt="Nature">
+            <h3>John Obama</h3>
+        </div>
+        <div class="artist-card" data-tags="space">
+            <img src="artist2.jpg" alt="Space">
+            <h3>Liam Howard</h3>
+        </div>
+        <div class="artist-card" data-tags="steampunk">
+            <img src="artist3.jpg" alt="Steampunk">
+            <h3>Graham Kennedy</h3>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+        <!-- Quick Links -->
+        <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="/index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="/profiles.html"><i class="fa-solid fa-user"></i> Artists</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-address-book"></i> Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="footer-column">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-facebook"></i>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="footer-column">
+            <h4>Contact Us</h4>
+            <p>Email: <a href="mailto:info@benzo.com">info@benzo.com</a></p>
+            <p>Phone: +1 234 567 890</p>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 BENZO. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art</title>
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="text/javascript" src="JavaScript/script.js" defer></script>
+</head>
+<body>
+
+<!-- Sticky Navbar with Logo and Menu -->
+<div id="navbar" class="navbar">
+    <img id="logo" src="Images/BenzoLogo.jpg" alt="BENZO Logo">
+    <div class="nav-links">
+        <a href="/index.html" class="nav-item">Home</a>
+        <a href="/profiles.html" class="nav-item" target="_blank">Artists</a>
+        <button onclick="toggleMenu()" class="nav-item">Menu</button>
+        <div id="menuItems" class="menu-items">
+            <label><a href="/about-us.html">About Us</a></label><br>
+            <label><a href="/profiles.html">Profiles</a></label><br>
+            <label><a href="/blog-home.html">Blogs</a></label><br>
+            <label><a href="/form.html">Commission</a></label><br>
+        </div>
+    </div>
+</div>
+
+<!-- Sticky Search Bar with Filter Menu -->
+<div class="search-bar-container">
+    <input type="text" id="search" placeholder="Search images..." onkeyup="searchImages()"/>
+    <div id="search-results" style="display:none; position: absolute; background-color: #fff; border: 1px solid #ddd; max-width: 300px;"></div>
+</div>
+
+<!-- Art Showcase Section -->
+<body>
+    <div class="art-item-container">
+        <h1 id="item-title">Art Item Title</h1>
+        <img id="item-image" src="" alt="Art Item Image" class="art-item-image">
+        
+        <!-- Art Description -->
+        <p id="item-description">Art Description</p>
+    
+        <!-- Like and Dislike Section -->
+        <div class="likes-dislikes">
+            <button id="like-btn">Like</button>
+            <span id="like-count">0</span>
+            <button id="dislike-btn">Dislike</button>
+            <span id="dislike-count">0</span>
+        </div>
+    
+        <!-- Rating System -->
+        <div class="rating">
+            <h3>Rate this Artwork:</h3>
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+        </div>
+    
+        <!-- Comment Section -->
+        <div class="comments-section">
+            <h3>Comments:</h3>
+            <ul id="comment-list">
+                <!-- Existing comments will load here -->
+            </ul>
+    
+            <form id="comment-form">
+                <input type="text" id="comment-name" placeholder="Your Name" required>
+                <textarea id="comment-text" placeholder="Write your comment here..." required></textarea>
+                <button type="button" id="submit-comment">Submit Comment</button>
+            </form>
+        </div>
+    </div>    
+</body>
+
+
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+        <!-- Quick Links -->
+        <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="/index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="/profiles.html"><i class="fa-solid fa-user"></i> Artists</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-address-book"></i> Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="footer-column">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-facebook"></i>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="footer-column">
+            <h4>Contact Us</h4>
+            <p>Email: <a href="mailto:info@benzo.com">info@benzo.com</a></p>
+            <p>Phone: +1 234 567 890</p>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 BENZO. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>

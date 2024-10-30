@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage - BENZO</title>
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="text/javascript" src="JavaScript/script.js" defer></script>
+</head>
+<body>
+
+<!-- Sticky Navbar with Logo and Menu -->
+<div id="navbar" class="navbar">
+    <img id="logo" src="Images/BenzoLogo.jpg" alt="BENZO Logo">
+    <div class="nav-links">
+        <a href="/index.html" class="nav-item" style="color: #f9f9f9; background-color: #333;" class="active">Home</a>
+        <a href="/profiles.html" class="nav-item" target="_blank">Artists</a>
+        <button onclick="toggleMenu()" class="nav-item">Menu</button>
+        <div id="menuItems" class="menu-items">
+            <label><a href="/about-us.html">About Us</a></label><br>
+            <label><a href="/profiles.html">Profiles</a></label><br>
+            <label><a href="/blog-home.html">Blogs</a></label><br>
+            <label><a href="/form.html">Commission</a></label><br>
+        </div>
+    </div>
+</div>
+
+<!-- Sticky Search Bar with Filter Menu -->
+<div class="search-bar-container">
+    <input type="text" id="search" placeholder="Search images..." onkeyup="searchImages()"/>
+    <div id="search-results" style="display:none; position: absolute; background-color: #fff; border: 1px solid #ddd; max-width: 300px;"></div>
+</div>
+
+<!-- Content Section -->
+<div class="content" id="home">
+    <!-- First Row of Images -->
+    <div class="gallery" id="gallery1">
+        <div class="gallery-item">
+            <h3>Nature Image 1</h3>
+            <a href="artitem.html?id=1">
+                <img src="Images/Nature/ai-generated-8659507_1280.jpg" alt="AI-generated Nature Image 1" data-title="Dew Drops">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <h3>Future Cityscape</h3>
+            <a href="artitem.html?id=2">
+                <img src="Images/Future/city-5312500_1280.jpg" alt="Future Cityscape" data-title="Futuristic City">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <h3>Steampunk Creation</h3>
+            <a href="artitem.html?id=3">
+                <img src="Images/Steampunk/ai-generated-7946718_1280.jpg" alt="Steampunk AI-generated Creation" data-title="Steampunk Robot">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <h3>Space Landscape</h3>
+            <a href="artitem.html?id=4">
+                <img src="Images/Space/ai-generated-9035417_1280.jpg" alt="Space AI-generated Landscape" data-title="Galactic View">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <h3>Nature Flower</h3>
+            <a href="artitem.html?id=5">
+                <img src="Images/Nature/flower-7242158_1280.jpg" alt="Nature Flower Image" data-title="Blossoming Flower">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <h3>Cars Image</h3>
+            <a href="artitem.html?id=6">
+                <img src="Images/Cars/ai-generated-8674235_1280.png" alt="AI-generated Car Image" data-title="Electric Car">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <h3>Car Image 2</h3>
+            <a href="artitem.html?id=7">
+                <img src="Images/Cars/car-8514314_1280.png" alt="Second Car Image" data-title="Vintage Car">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <h3>Nature Image 2</h3>
+            <a href="artitem.html?id=8">
+                <img src="Images/Nature/lake-6701636_1280.jpg" alt="Second Nature Image" data-title="Serene Lake">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <h3>Space Image 2</h3>
+            <a href="artitem.html?id=9">
+                <img src="Images/Space/ai-generated-9035437_1280.jpg" alt="Second AI-generated Space Image" data-title="Cosmic Explosion">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <h3>Steampunk Image 2</h3>
+            <a href="artitem.html?id=10">
+                <img src="Images/Steampunk/ai-generated-7946718_1280.jpg" alt="Second Steampunk AI-generated Image" data-title="Steam Engine">
+            </a>
+        </div>
+    </div>
+
+    <!-- Second Row of Images -->
+    <div class="gallery" id="gallery2">
+        <div class="gallery-item">
+            <h3>Future City Image 2</h3>
+            <a href="artitem.html?id=11">
+                <img src="Images/Future/crystal-8920268_1280.jpg" alt="Second Future City Image" data-title="Crystal Skyscrapers">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <h3>Nature Image 3</h3>
+            <a href="artitem.html?id=12">
+                <img src="Images/Nature/water-8100724_1280.jpg" alt="Third Nature Image" data-title="Waterfall">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <h3>Space Image 3</h3>
+            <a href="artitem.html?id=13">
+                <img src="Images/Space/space-11099_1280.jpg" alt="Third Space Image" data-title="Nebula Clouds">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <h3>Steampunk Image 3</h3>
+            <a href="artitem.html?id=14">
+                <img src="Images/Steampunk/generated-7558201_1280.jpg" alt="Third Steampunk Image" data-title="Mechanical Workshop">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <h3>Nature Flower 2</h3>
+            <a href="artitem.html?id=15">
+                <img src="Images/Nature/water-lily-8991682_1280.png" alt="Second Nature Flower Image" data-title="Water Lily">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <h3>Cars Image 3</h3>
+            <a href="artitem.html?id=16">
+                <img src="Images/Cars/car-5548242_1280.jpg" alt="Third Cars Image" data-title="Retro Sports Car">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <h3>Space Image 4</h3>
+            <a href="artitem.html?id=17">
+                <img src="Images/Space/space-7709489_1280.jpg" alt="Fourth Space Image" data-title="Starscape">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <h3>Steampunk Image 4</h3>
+            <a href="artitem.html?id=18">
+                <img src="Images/Steampunk/vintage-4273640_1280.jpg" alt="Fourth Steampunk Image" data-title="Vintage Machine">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <h3>Future City Image 3</h3>
+            <a href="artitem.html?id=19">
+                <img src="Images/Future/train-8239077_1280.jpg" alt="Third Future City Image" data-title="Futuristic Train">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <h3>Space Image 5</h3>
+            <a href="artitem.html?id=20">
+                <img src="Images/Space/stars-67616_1280.jpg" alt="Fifth Space Image" data-title="Starlit Sky">
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Discover Artists, Commission Work</h1>
+        <p>Connecting creators with clients for stunning custom art.</p>
+        <button value="PLAY" onclick="playAudio()">Explore Now</button>
+        <audio id="audio" src="pop.mp3"></audio>
+        
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-card">
+        <p>"This platform helped me find the perfect artist for my project!"</p>
+        <h4>- Abraham Obama</h4>
+    </div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="cta">
+    <h2>Stay Updated</h2>
+    <form>
+        <input type="email" placeholder="Enter your email">
+        <button class="sound-btn">Subscribe</button>
+    </form>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+        <!-- Quick Links -->
+        <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="/index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="/profiles.html"><i class="fa-solid fa-user"></i> Artists</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-address-book"></i> Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="footer-column">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-facebook"></i>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="footer-column">
+            <h4>Contact Us</h4>
+            <p>Email: <a href="mailto:info@benzo.com">info@benzo.com</a></p>
+            <p>Phone: +1 234 567 890</p>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 BENZO. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
